@@ -27,7 +27,7 @@ int main(){
     }
 
     // write file
-    std::ofstream fout("config.yaml");
+    std::ofstream fout("./yaml/rewrite-furniture.yaml");
     fout << std::fixed << std::setprecision(1); // round up to 1 digit after decimal point
     fout << "furniture:" << endl;
     for (const auto& obj : obj_list) {
@@ -56,6 +56,7 @@ int main(){
             }
             fout << "]," << endl;
         }
+        lv=2;
         fout << string(indent(lv), ' ') <<  "]" << endl;
         fout << endl;
     }
